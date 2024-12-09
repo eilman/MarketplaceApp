@@ -1,0 +1,134 @@
+.marketplace {
+  padding: 20px;
+  background-color: #ebebeb;
+  border-radius: 32px;
+}
+
+.marketplace h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.horizontal-product-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  gap: 20px;
+  justify-content: center;
+}
+
+.horizontal-item {
+  flex: 0 0 auto; 
+  display: flex;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horizontal-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.horizontal-item img {
+  width: 160px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.horizontal-item h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.product-info p {
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dots-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.numbers-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active-dot {
+  background-color: #007bff;
+}
+
+.vertical-product-container {
+  margin-top: 20px;
+}
+
+.vertical-product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.MuiPagination-root {
+  justify-content: center !important;
+  margin: 10px auto;
+}
+
+.marketplace h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.page-container {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.price-container {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+}
+
+.heading-l {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(83, 83, 83);
+}
