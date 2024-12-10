@@ -62,7 +62,7 @@
   margin-top: 10px;
 }
 
-.numbers-pagination {
+.vertical-pagination {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -119,6 +119,15 @@
   margin-top: 1.5rem;
 }
 
+.main-box {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 64rem;
+}
+
 .price-container {
   margin-top: 10px;
   font-size: 1.5rem;
@@ -131,4 +140,18 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: rgb(83, 83, 83);
+}
+
+.horizontal-item-h2 {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(83, 83, 83);
+}
+
+.horizontal-item-price-container {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
 }

@@ -5,25 +5,25 @@ There are 2 product list on the Marketplace page; horizontal and vertical. The u
 In the Product Detail page, related product's image, brand, name and attributes are given.
 
 ## Technologies Used
-# Frontend
+### Frontend
 React: For building user interfaces.
 React DOM: To connect React components to the browser DOM.
 Material-UI (@mui/material): For modern and responsive UI components.
 Emotion (@emotion/react, @emotion/styled): For styling and compatibility with Material-UI.
-# Backend & Server
+### Backend & Server
 Remix (@remix-run/node, @remix-run/react, @remix-run/serve): For server-side rendering and routing.
-# Type Checking & Linting
+### Type Checking & Linting
 TypeScript: Ensures type safety.
 ESLint: For code quality and style checks, with plugins for React, hooks, and TypeScript.
-# Styling
+### Styling
 Tailwind CSS: Utility-first CSS framework.
 PostCSS & Autoprefixer: For processing and browser compatibility.
-# Build Tools
+### Build Tools
 Vite: Fast development server and build tool.
 vite-tsconfig-paths: Supports TypeScript path aliases in Vite.
-# Additional Libraries
+### Additional Libraries
 react-image-gallery: For displaying product galleries.
-# Runtime
+### Runtime
 Node.js (>=20.0.0): JavaScript runtime for server-side execution.
 
 ## Development

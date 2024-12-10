@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useParams } from "react-router-dom";
 import Header from "~/components/Header";
-import { useProductDetail } from "./ProductDetailPageViewModel";
+import { useProductDetail } from "../../viewmodels/ProductDetailPageViewModel";
 import "../../styles/ProductDetailPage.css";
 
 const ProductDetailPage: FC = () => {
@@ -32,7 +32,7 @@ const ProductDetailPage: FC = () => {
               </div>
               <div className="container-padding">
                 <h2 className="heading-m">{productDetail.mkName}</h2>
-                <h2 className="heading-l">{productDetail.productName}</h2>
+                <h2 className="heading-lp">{productDetail.productName}</h2>
                 <div className="badge-container">{productDetail.badge}</div>
                 <div className="rating-container">
                   {Array.from({ length: productDetail.rating }, (_, i) => (
@@ -64,21 +64,59 @@ const ProductDetailPage: FC = () => {
             </div>
             <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
               <dl className="sm:divide-y sm:divide-gray-200">
-                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-black flex items-center">
-                    Ürün Detayları
+                <div className="product-detail-item">
+                  <dt className="product-detail-title">
+                    Açıklamalar
                   </dt>
-                  <dd className="mt-1 text-sm text-black/70 sm:mt-0 sm:col-span-2">
+                  <dd className="product-detail-value">
                     {productDetail.mkName} / {productDetail.productName}
                   </dd>
                 </div>
-                <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-black flex items-center">
+                <div className="product-detail-item">
+                  <dt className="product-detail-title">
                     Değişim/İade
                   </dt>
-                  <dd className="mt-1 text-sm text-black/70 sm:mt-0 sm:col-span-2">
+                  <dd className="product-detail-value">
                     30 Gün
                   </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div className="product-details-container">
+            <div className="header-section">
+              <h3 className="title">Ürün Detayları</h3>
+            </div>
+            <div className="details-container">
+              <dl className="details-grid">
+                <div className="details-item">
+                  <dt className="details-label">Marka</dt>
+                  <dd className="details-value">{productDetail.mkName}</dd>
+                </div>
+                <div className="details-item">
+                  <dt className="details-label">Model</dt>
+                  <dd className="details-value">{productDetail.productName}</dd>
+                </div>
+                <div className="details-item">
+                  <dt className="details-label">Kategori</dt>
+                  <dd className="details-value">Teknoloji</dd>
+                </div>
+                <div className="details-item">
+                  <dt className="details-label">Değişim/İade</dt>
+                  <dd className="details-value">30 Gün</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div className="product-details-container">
+            <div className="header-section">
+              <h3 className="title">Satıcı Bilgileri</h3>
+            </div>
+            <div className="details-container">
+              <dl className="details-grid">
+                <div className="details-item">
+                  <dt className="details-label">Satıcı</dt>
+                  <dd className="details-value">Dwight S.</dd>
                 </div>
               </dl>
             </div>

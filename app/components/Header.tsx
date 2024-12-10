@@ -1,13 +1,17 @@
 import { FC } from "react";
-import logo from "~/assets/images/yeni_logo_bg.png";
+import { Link } from "react-router-dom";
+import logo from "~/assets/images/brand_logo.png";
 import "../styles/Header.css";
 
 const Header: FC = () => {
   return (
     <div className="header-container">
-      <img src={logo} alt="Marketplace Logo" className="logo" />
+      <Link to="/marketplace">
+        <img src={logo} alt="Marketplace Logo" className="logo" />
+      </Link>
     </div>
   );
 };
 
 export default Header;
+

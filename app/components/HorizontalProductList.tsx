@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Product } from "../models/product";
-//import { Pagination as MuiPagination } from "@mui/material";
 import { Link } from "@remix-run/react";
+import HorizontalItemCard from "~/components/HorizontalItemCard";
 import "../styles/MarketplacePage.css";
 
 interface HorizontalProductListProps {
@@ -17,28 +17,15 @@ const HorizontalProductList: React.FC<HorizontalProductListProps> = ({ products 
     currentPage * itemsPerPage
   );
 
-  /*
-  const handlePageChange = (_: React.ChangeEvent<unknown>, page: number) => {
-    setCurrentPage(page);
-  };
-*/
-
   return (
-    <div className="horizontal-list-container">
-      <div className="horizontal-list">
+    <div>
+      <div>
         {paginatedProducts.map((product) => (
           <Link 
           key={product.code} 
           to={`/productDetail/${product.code}`}
-          className="horizontal-item"
         >
-          <img src={product.imageUrl} alt={product.name} />
-          <div className="product-info">
-            <h2 className="heading-l">{product.name}</h2>
-            <div className="price-container">₺ {product.price}</div>
-            <p>{product.countOfPrices} Satıcı</p>
-            <p>{product.followCount}+ Takip</p>
-          </div>
+          <HorizontalItemCard product={product} />
         </Link>
         ))}
       </div>
