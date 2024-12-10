@@ -1,9 +1,9 @@
 import React from "react";
 import { useMarketplacePageViewModel } from "../../viewmodels/MarketplacePageViewModel";
-import Header from "~/components/Header";
-import HorizontalProductList from "~/components/HorizontalProductList";
+import Header from "../../components/Header";
+import HorizontalProductList from "../../components/HorizontalProductList";
 import "../../styles/MarketplacePage.css";
-import VerticalProductList from "~/components/VerticalProductList";
+import VerticalProductList from "../../components/VerticalProductList";
 
 
 const MarketplacePage: React.FC = () => {

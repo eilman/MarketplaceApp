@@ -1,26 +1,18 @@
 import { useEffect, useState } from "react";
-import { fetchProductDetail } from "~/services/productService";
+import { fetchProductDetail } from "../services/productService";
+import { ProductDetail } from "~/models/product";
 
-export interface ProductDetail {
-  code: string;
-  productName: string;
-  imageUrl: string;
-  price: number;
-  rating: number;
-  storageOptions: string[];
-  mkName: string;
-  badge: string;
-  freeShipping: boolean;
-  lastUpdate: string;
-}
 
 export const useProductDetail = (code: string | undefined) => {
   const [productDetail, setProductDetail] = useState<ProductDetail | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    if (!code) return;
-
+    if (!code) {
+      setIsLoading(false);
+      setProductDetail(null);
+      return;
+    }
     const loadProduct = async () => {
       setIsLoading(true);
       try {
@@ -33,7 +25,6 @@ export const useProductDetail = (code: string | undefined) => {
         setIsLoading(false);
       }
     };
-
     loadProduct();
   }, [code]);
 

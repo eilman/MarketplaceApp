@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Product } from "../models/product";
 import { Link } from "@remix-run/react";
-import HorizontalItemCard from "~/components/HorizontalItemCard";
+import HorizontalItemCard from "../components/HorizontalItemCard";
 import "../styles/MarketplacePage.css";
 
 interface HorizontalProductListProps {

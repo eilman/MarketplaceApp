@@ -21,10 +21,14 @@ PostCSS & Autoprefixer: For processing and browser compatibility.
 ### Build Tools
 Vite: Fast development server and build tool.
 vite-tsconfig-paths: Supports TypeScript path aliases in Vite.
-### Additional Libraries
-react-image-gallery: For displaying product galleries.
 ### Runtime
 Node.js (>=20.0.0): JavaScript runtime for server-side execution.
+### Testing
+Jest: JavaScript testing framework for unit and integration tests.
+React Testing Library: For testing React components, with utilities like @testing-library/react and @testing-library/user-event.
+Jest-DOM: Provides custom matchers for asserting on DOM elements.
+ts-jest: TypeScript preprocessor for Jest, enabling testing with TypeScript.
+
 
 ## Development
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchProducts } from "~/services/productService";
+import { fetchProducts } from "../services/productService";
 import { Product, ProductResponse } from "~/models/product";
 
 export const useMarketplacePageViewModel = () => {

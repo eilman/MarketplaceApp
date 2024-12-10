@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import VerticalItemCard from "~/components/VerticalItemCard";
+import VerticalItemCard from "../components/VerticalItemCard";
 import { useMarketplacePageViewModel } from "../viewmodels/MarketplacePageViewModel";
 import "../styles/MarketplacePage.css";
 
