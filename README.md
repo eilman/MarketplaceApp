@@ -31,6 +31,21 @@ Jest-DOM: Provides custom matchers for asserting on DOM elements.
 ts-jest: TypeScript preprocessor for Jest, enabling testing with TypeScript.
 
 
+## Architectural Approach
+This project follows SOLID principles and employs the MVVM architecture to ensure maintainability, scalability, and testability:
+### SOLID Principles: 
+Each class and component adheres to a single responsibility, and the codebase is designed to be open for extension but closed for modification. Dependency injection is used to manage dependencies effectively.
+### MVVM Architecture: 
+The application is structured with clear separation of concerns:
+Model handles the business logic and data management.
+View represents the user interface.
+ViewModel acts as a mediator, managing data flow and business logic between the Model and View.
+
+
+## To create the node-modules
+
+npm install
+
 ## Development
 
 Run the dev server:
@@ -67,3 +82,11 @@ Make sure to deploy the output of `npm run build`
 ## Styling
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+
+
+## Screenshots
+### Marketplace Page
+![Marketplace Page](./screenshots/MarketplaceApp_marketplacePage.PNG)
+
+### Product Detail Page
+![Product Detail Page](./screenshots/MarketplaceApp_productDetailPage.PNG)
