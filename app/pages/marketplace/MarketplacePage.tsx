@@ -4,13 +4,21 @@ import Header from "../../components/Header";
 import HorizontalProductList from "../../components/HorizontalProductList";
 import "../../styles/MarketplacePage.css";
 import VerticalProductList from "../../components/VerticalProductList";
+import { Product } from "~/models/product";
 
+interface MarketplacePageProps {
+  horizontalProducts: Product[];
+  verticalProducts: Product[];
+}
 
-const MarketplacePage: React.FC = () => {
-  const {
+const MarketplacePage: React.FC<MarketplacePageProps> = ({
+  horizontalProducts,
+  verticalProducts,
+}) => {
+  const { paginatedProducts, currentPage, goToPage, loading } = useMarketplacePageViewModel({
     horizontalProducts,
-    loading,
-  } = useMarketplacePageViewModel();
+    verticalProducts,
+  });
 
   return (
     <div className="page-container">
@@ -21,7 +29,12 @@ const MarketplacePage: React.FC = () => {
             <HorizontalProductList products={horizontalProducts} />
           </div>
           {loading && <div className="loading">Loading products...</div>}
-            <VerticalProductList />
+          <VerticalProductList
+            verticalProducts={verticalProducts}
+            products={paginatedProducts}
+            currentPage={currentPage}
+            goToPage={goToPage}
+          />
         </div>
       </div>
     </div>

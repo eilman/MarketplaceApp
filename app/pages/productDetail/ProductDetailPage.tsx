@@ -1,16 +1,15 @@
-import { FC } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 import Header from "../../components/Header";
-import { useProductDetail } from "../../viewmodels/ProductDetailPageViewModel";
 import "../../styles/ProductDetailPage.css";
+import { ProductDetail } from "~/models/product";
+import { useProductDetail } from "../../viewmodels/ProductDetailPageViewModel";
 
-const ProductDetailPage: FC = () => {
-  const { code } = useParams<{ code: string }>();
-  const { productDetail, isLoading } = useProductDetail(code);
+interface ProductDetailPageProps {
+  productDetail: ProductDetail | null;
+}
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productDetail: initialProductDetail }) => {
+  const { productDetail } = useProductDetail({ productDetail: initialProductDetail });
 
   if (!productDetail) {
     return <div>Product not found.</div>;
@@ -65,20 +64,14 @@ const ProductDetailPage: FC = () => {
             <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
               <dl className="sm:divide-y sm:divide-gray-200">
                 <div className="product-detail-item">
-                  <dt className="product-detail-title">
-                    Açıklamalar
-                  </dt>
+                  <dt className="product-detail-title">Açıklamalar</dt>
                   <dd className="product-detail-value">
                     {productDetail.mkName} / {productDetail.productName}
                   </dd>
                 </div>
                 <div className="product-detail-item">
-                  <dt className="product-detail-title">
-                    Değişim/İade
-                  </dt>
-                  <dd className="product-detail-value">
-                    30 Gün
-                  </dd>
+                  <dt className="product-detail-title">Değişim/İade</dt>
+                  <dd className="product-detail-value">30 Gün</dd>
                 </div>
               </dl>
             </div>

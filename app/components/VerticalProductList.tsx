@@ -1,22 +1,25 @@
 import React, { Suspense } from "react";
 import VerticalItemCard from "../components/VerticalItemCard";
-import { useMarketplacePageViewModel } from "../viewmodels/MarketplacePageViewModel";
-import "../styles/MarketplacePage.css";
-
+import { Product } from "~/models/product";
 const Pagination = React.lazy(() => import('@mui/material/Pagination'));
 
-const VerticalProductList: React.FC= () => {
-const {
+interface VerticalProductListProps {
+    verticalProducts: Product[];
+    products: Product[];
+    currentPage: number;
+    goToPage: (page: number) => void;
+}
+
+const VerticalProductList: React.FC<VerticalProductListProps> = ({
     verticalProducts,
-    paginatedProducts,
+    products,
     currentPage,
     goToPage,
-    } = useMarketplacePageViewModel();
-
-  return (
-    <div>
+}) => {
+    return (
+        <div>
         <div className="vertical-product-list">
-            {paginatedProducts.map((product) => (
+            {products.map((product) => (
             <a
                 key={product.code}
                 href={`/productDetail/${product.code}`}
@@ -40,8 +43,8 @@ const {
             <div>Loading...</div>
             )}
         </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default VerticalProductList;
