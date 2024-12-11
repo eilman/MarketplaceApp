@@ -2,7 +2,8 @@
 This is an application that provides specific products and their details.
 The user can find the product list on the Marketplace Page and the related product's details are given in the Product Detail page. 
 There are 2 product list on the Marketplace page; horizontal and vertical. The user can display them with pagination. 
-In the Product Detail page, related product's image, brand, name and attributes are given.
+In the Product Detail page, related product's image, brand, name and attributes are given. 
+With the logo in the header, the page will be routed to the marketplace(main) page.
 
 ## Technologies Used
 ### Frontend

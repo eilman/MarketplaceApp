@@ -2,19 +2,15 @@ import React from "react";
 import Header from "../../components/Header";
 import "../../styles/ProductDetailPage.css";
 import { ProductDetail } from "~/models/product";
-import { useProductDetail } from "../../viewmodels/ProductDetailPageViewModel";
 
 interface ProductDetailPageProps {
   productDetail: ProductDetail | null;
 }
 
-const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productDetail: initialProductDetail }) => {
-  const { productDetail } = useProductDetail({ productDetail: initialProductDetail });
-
+const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productDetail }) => {
   if (!productDetail) {
     return <div>Product not found.</div>;
   }
-
   return (
     <div className="page-container">
       <Header />
